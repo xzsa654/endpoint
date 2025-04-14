@@ -1,4 +1,4 @@
-![Cream Brown Promotion Flyer Buy 1 Get 1 Sale Instagram Post](https://github.com/user-attachments/assets/a4a02af3-d84b-4170-b013-3895d24a5af6)
+![Cream Brown Promotion Flyer Buy 1 Get 1 Sale Instagram Post](https://github.com/xzsa654/endpoint/blob/main/Group%2020.png)
 
 ## 專案簡介
 
@@ -6,7 +6,7 @@ endpoint 是一款使用 React Native 建立的即時社群媒體應用程式。
 .
 <br>
 
-## Technologies
+## 使用技術
 
 - 🚀 React Native + Expo
 - 🔐 Clerk 會員驗證系統
@@ -19,7 +19,6 @@ endpoint 是一款使用 React Native 建立的即時社群媒體應用程式。
 - 🎈+ 許多 expo 的應用!
 
 ![Blendy  The Social Media App](https://github.com/user-attachments/assets/eb7d7d15-6f1a-49a4-9dc1-31c32945b162)
-App demo: https://blendy-download.vercel.app
 
 # 網站特色
 
