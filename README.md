@@ -1,50 +1,132 @@
-# Welcome to your Expo app 👋
+![Cream Brown Promotion Flyer Buy 1 Get 1 Sale Instagram Post](https://github.com/user-attachments/assets/a4a02af3-d84b-4170-b013-3895d24a5af6)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## 專案簡介
 
-## Get started
+endpoint 是一款使用 React Native 建立的即時社群媒體應用程式。它具有 Google 登入、即時更新、媒體分享以及按讚、評論等互動功能
+.
+<br>
 
-1. Install dependencies
+## Technologies
 
-   ```bash
-   npm install
-   ```
+- 🚀 React Native + Expo
+- 🔐 Clerk 會員驗證系統
+- 🔄 Convex 後端
+- ❤️ 即時互動
+- 🖼️ Media Handling
+- 🔔 通知系統
+- ✏️ 會員編輯
+- 🔄 Webhooks 應用
+- 🎈+ 許多 expo 的應用!
 
-2. Start the app
+![Blendy  The Social Media App](https://github.com/user-attachments/assets/eb7d7d15-6f1a-49a4-9dc1-31c32945b162)
+App demo: https://blendy-download.vercel.app
 
-   ```bash
-    npx expo start
-   ```
+# 網站特色
 
-In the output, you'll find options to open the app in a
+### 👀 基本功能
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- 一鍵登入
+- 會員管理
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### 💁 我的會員
 
-## Get a fresh project
+- 更新個人資料
+- 新增圖片
 
-When you're ready, run:
+### 📱 社群動態
 
-```bash
-npm run reset-project
+- 實時動態
+- 方便查看他的貼文
+- 點讚、留言、加入書籤
+
+### ➕ 貼文
+
+- 圖片選擇
+- 支持說明文字
+- 貼文刪除
+
+### 🔔 實時通知
+
+- 喜歡提示 - 立即知道誰點讚了我的貼文
+- 留言提示 – 立即收到其他用戶對貼文的留言
+- 追蹤 - 立即收到誰追蹤了我
+
+### 👯 會員
+
+- 追蹤與未追蹤人數
+- 透過貼文查看用戶主頁
+
+### 🔗 書籤
+
+- 收藏喜歡的貼文
+- 點擊圖片放大
+
+如有其他問題，歡迎討論: xzsa654@gmail.com
+
+# 初始化
+
+### 請先執行 `npm i` 安裝所有套件
+
+### 註冊
+
+1. 請先至 clerk 官網註冊並快速建立一個會員系統
+   官網：https://clerk.com/
+2. 至 convex 註冊並創建專案 (‼️ 請將開發環境設為雲端 )
+   官網: https://www.convex.dev/
+3. 至 clerk/dashboard/Configure 添加一個新的 JWT templates
+   並到 convex 資料夾修改 auth.config.example.ts
+
+```
+  export default {
+providers: [
+  {
+    domain: "請填入JWT templates Issuer的網址",
+    applicationID: "請填入JWT templates 的 Name",
+  },
+]
+};
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+4. 在 clerk 添加 Webhooks：
 
-## Learn more
+- 複製環境變數內的 `EXPO_PUBLIC_CONVEX_URL` 並將後面的.cloud 更改為
+  .site/clerk-webhook 此為示範`https://modest-mosquito-925.convex. site/clerk-webhook`
+- 至 Configure/Webhooks 新增 將剛剛的網址貼入`Endpoint URL`
+  並將 `Subscribe to events` 設為 user.created 後創建
+- 將剛剛創建的 webhooks 複製 Signing Secret，並至 convex 設定環境變數
+  `CLERK_WEBHOOK_SECRET=剛剛複製的內容`
 
-To learn more about developing your project with Expo, look at the following resources:
+### 環境變數
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+透過根目錄 `.sample.env` 修改為 `.env.local` 並添加以下變數：
 
-## Join the community
+```
+EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY= 此處請複製clerkDashboard/Developers/API keys/Quick Copy
 
-Join our community of developers creating universal apps.
+ 終端機輸入 `npx convex dev` 開啟 convex 伺服器
+ 下方部分可以為convex環境變數 可以透過 / 專案/project settings / Lost Access 粘貼並輸入至終端機
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+CONVEX_DEPLOYMENT=
+
+EXPO_PUBLIC_CONVEX_URL=
+
+Environment Variables
+```
+
+### 專案演示
+
+請確保已完成以上步驟
+
+📲💻 至 appStore 或者 playStore 下載 Expo Go
+
+- 將手機與電腦連接同一個 WIFI，終端機執行：
+
+```
+ npx convex deploy && npx expo start
+```
+
+- expo 執行完畢後也可以掃描 QRcode 查看專案
+
+#
+
+感謝各位~祝各位有個美好的一天！
