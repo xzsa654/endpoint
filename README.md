@@ -109,7 +109,6 @@ CONVEX_DEPLOYMENT=
 
 EXPO_PUBLIC_CONVEX_URL=
 
-Environment Variables
 ```
 
 ### 專案演示
