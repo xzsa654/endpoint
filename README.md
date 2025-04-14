@@ -1,4 +1,4 @@
-![Cream Brown Promotion Flyer Buy 1 Get 1 Sale Instagram Post](https://github.com/xzsa654/endpoint/blob/main/Group%2020.png)
+![LOGO](https://github.com/xzsa654/endpoint/blob/main/Group%2020.png)
 
 ## 專案簡介
 
@@ -18,7 +18,7 @@ endpoint 是一款使用 React Native 建立的即時社群媒體應用程式。
 - 🔄 Webhooks 應用
 - 🎈+ 許多 expo 的應用!
 
-![Blendy  The Social Media App](https://github.com/user-attachments/assets/eb7d7d15-6f1a-49a4-9dc1-31c32945b162)
+![Social Media App](https://github.com/xzsa654/endpoint/blob/main/Group%2022.png)
 
 # 網站特色
 
